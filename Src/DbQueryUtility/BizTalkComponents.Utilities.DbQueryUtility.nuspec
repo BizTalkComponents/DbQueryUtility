@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizTalkComponents.Utilities.DbQueryUtility</id>
+    <version>$version$</version>
+    <authors>Richard Hallgren</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/BizTalkComponents/DbQueryUtility</projectUrl>
+    <description>Utility for reading data from database.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>BizTalk</tags>
+  </metadata>
+</package>
