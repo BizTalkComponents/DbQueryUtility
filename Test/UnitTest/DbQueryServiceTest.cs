@@ -38,5 +38,20 @@ namespace BizTalkComponents.Utilities.DbQueryUtility.Test.UnitTest
             Assert.AreEqual(3, result.Select("/result/node()").Count);
             Assert.AreEqual("param2value", result.SelectSingleNode("/result/param2").Value);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void TestNoConfigurationKey()
+        {
+            var result = util.Query("SELECT * FROM Test", "");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void TestNoQuery()
+        {
+            var result = util.Query("", "Key");
+        }
+
     }
 }

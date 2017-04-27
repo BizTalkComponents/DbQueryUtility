@@ -23,6 +23,16 @@ namespace BizTalkComponents.Utilities.DbQueryUtility
 
         public XPathNavigator Query(string query, string configurationKey)
         {
+            if(string.IsNullOrWhiteSpace(query))
+            {
+                throw new ArgumentNullException("query");
+            }
+
+            if(string.IsNullOrWhiteSpace(configurationKey))
+            {
+                throw new ArgumentNullException("configurationKey");
+            }
+
             var doc = _dbQueryRepository.Query(query, configurationKey);
             var nav = doc.CreateNavigator();
 
