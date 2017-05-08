@@ -22,7 +22,7 @@ namespace BizTalkComponents.Utilities.DbQueryUtility.Repository
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    if(query.ToLower().StartsWith("exec"))
+                    if(query.Split(' ').Count() == 0)
                     {
                         command.CommandType = System.Data.CommandType.StoredProcedure;
                     }
