@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="BizTalkComponents.Utilities.DqQueryUtility.snk" />
-    <None Include="Oracle.ManagedDataAccess.12.2.1100.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
