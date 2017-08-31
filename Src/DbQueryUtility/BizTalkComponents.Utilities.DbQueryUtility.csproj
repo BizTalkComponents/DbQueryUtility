@@ -37,6 +37,10 @@
     <AssemblyOriginatorKeyFile>BizTalkComponents.Utilities.DqQueryUtility.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -49,13 +53,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbQueryUtilityService.cs" />
+    <Compile Include="OracleDbQueryApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IDbQueryRepository.cs" />
+    <Compile Include="Repository\OracleDbQueryRepository.cs" />
     <Compile Include="Repository\SqlDbQueryRepository.cs" />
     <Compile Include="SqlDbQueryApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BizTalkComponents.Utilities.DqQueryUtility.snk" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
